@@ -1,6 +1,52 @@
 // Pages/welcome/welcome.js
 Page({
   data:{},
+  onButton1Click:function(event){
+    var OpenID=123;
+    wx.request({
+      url: 'https://56493008.qcloud.la/GetDataByOpenIDFromUserInfo.php?OpenID=123',
+      data: {
+      },
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      header:{
+        "content-type":"json"
+      },
+      success: function(res){
+        console.log(res.data["Error"])
+      },
+      fail: function(res) {
+        // fail
+      },
+      complete: function(res) {
+        // complete
+      }
+    })
+  },
+  onButton2Click: function (event) {
+    var OpenID = '123';
+    var Avatar='C:/windows';
+    wx.request({
+      url: 'https://56493008.qcloud.la/UserFirstLogin.php',
+      data: {
+        "OpenID":OpenID,
+        "Avatar":Avatar,
+      },
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (res) {
+        // fai
+      },
+      complete: function (res) {
+        // complete
+      }
+    })
+  },
+
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },

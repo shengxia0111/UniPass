@@ -1,2 +1,6 @@
 <!--Pages/welcome/welcome.wxml-->
 <text>hello world</text>
+<view class="test">
+    <button bindtap="onButton1Click">Button</button>
+    <button bindtap="onButton2Click">Button2</button>
+</view>
