@@ -12,7 +12,7 @@ Page({
         "content-type":"json"
       },
       success: function(res){
-        console.log(res.data["Error"])
+        console.log(res.data)
       },
       fail: function(res) {
         // fail
@@ -23,13 +23,15 @@ Page({
     })
   },
   onButton2Click: function (event) {
-    var OpenID = '123';
+    var OpenID = '1231';
     var Avatar='C:/windows';
+    var UserType=1;
     wx.request({
       url: 'https://56493008.qcloud.la/UserFirstLogin.php',
       data: {
         "OpenID":OpenID,
         "Avatar":Avatar,
+        "UserType":UserType
       },
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       header: {
