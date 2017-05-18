@@ -918,6 +918,16 @@ icon {
   width: 100%;
   border-bottom: 1rpx solid #CCCCCC;
 }
+.weui-navbar_inside {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  border-bottom: 1rpx solid #CCCCCC;
+}
 .weui-navbar__item {
   position: relative;
   display: block;

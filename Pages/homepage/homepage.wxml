@@ -1,0 +1,156 @@
+<view class="page">
+
+    <view class="page__bd">
+        <view class="page__searbard">
+            <view class="weui-search-bar">
+                <view class="weui-search-bar__form">
+                    <view class="weui-search-bar__box">
+                        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                            <icon type="clear" size="14"></icon>
+                        </view>
+                    </view>
+                    <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                        <icon class="weui-icon-search" type="search" size="14"></icon>
+                        <view class="weui-search-bar__text">搜索</view>
+                    </label>
+                </view>
+                <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+            </view>
+            <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+                <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                    <view class="weui-cell__bd">
+                        <view>实时搜索文本</view>
+                    </view>
+                </navigator>
+                <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                    <view class="weui-cell__bd">
+                        <view>实时搜索文本</view>
+                    </view>
+                </navigator>
+                <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                    <view class="weui-cell__bd">
+                        <view>实时搜索文本</view>
+                    </view>
+                </navigator>
+                <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                    <view class="weui-cell__bd">
+                        <view>实时搜索文本</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+        <view class="page-section page-section-spacing swiper">
+        <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{background}}" wx:key="*this">
+            <swiper-item>
+                <view class="swiper-item {{item}}"></view>
+            </swiper-item>
+            </block>
+        </swiper>
+        </view>
+        <view class="page__navbard">
+            <view class="weui-tab">
+                <view class="weui-navbar">
+                    <block wx:for="{{tabs}}" wx:key="*this">
+                        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                            <view class="weui-navbar__title">{{item}}</view>
+                        </view>
+                    </block>
+                    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                </view>
+                <view class="weui-tab__panel">
+                    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                        <view class="flex-wrp" style="flex-direction:column;">
+                            <view class="flex-item flex-item-V">
+                                <view class="wx-view_navbar1_item">
+                                    <view class="view_item_left">
+                                        <icon class="wx-icon_item_1" size="37" type="success"/>
+                                    </view>
+                                    <view class="view_item_middle">
+                                        <text class="wx-text_1">李 路 明</text>
+                                    </view>
+                                    <view class="view_item_right">
+                                        <text class="wx-text_2">北京科技大学</text>
+                                        <text class="wx-text_3">工业设计</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="flex-item flex-item-V demo-text-2"></view>
+                            <view class="flex-item flex-item-V demo-text-3"></view>
+                        </view>
+                    </view>
+                    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                        <view class="weui-navbar_inside">
+                        <block wx:for="{{tabs_inside}}" wx:key="*this">
+                            <view id="{{index}}" class="weui-navbar__item {{activeIndex_inside == index ? 'weui-bar__item_on' : ''}}"         
+                                bindtap="tabClick_inside">
+                                <view class="weui-navbar__title">{{item}}</view>
+                            </view>
+                        </block>
+                            <view class="weui-navbar__slider" style="left: {{sliderLeft_inside}}px; transform: translateX({{sliderOffset_inside}}px);                                  -webkit-transform:translateX({{sliderOffset_inside}}px);">
+                            </view>
+                        </view>
+                        <view class="weui-tab__panel_inside">
+                            <view class="weui-tab__content" hidden="{{activeIndex_inside != 0}}">
+                                <view class="wx-view_major_and_school_item" data-c_e_id="wx_view_654d13e7">
+                                    <view class="wx-view_major_and_school_head" data-c_e_id="wx_view_ae31a7f3">
+                                        <text class="wx-text_major_and_school_head_text" data-c_e_id="wx_text_39cde3bc">工科</text>
+                                    </view>
+                                    <view class="c-minheight wx-view_major_and_school_body" data-c_e_id="wx_view_77917707">
+                                        <view class="c-minheight wx-view_major_and_school_body_spacing" data-c_e_id="wx_view_df0214d8">
+                                            <text class="wx-text_major_and_school_body_text" data-c_e_id="wx_text_8d71b96f">机械专业</text>
+                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_text87c5a733">计算机专业</text>
+                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_textb4a1022d">电气工程与自动化</text>
+                                        </view>
+                                    </view>
+                                </view>
+                                <view class="wx-view_major_and_school_item" data-c_e_id="wx_view3f35a164">
+                                    <view class="wx-view_major_and_school_head" data-c_e_id="wx_viewfa2a36ed">
+                                        <text class="wx-text_major_and_school_head_text" data-c_e_id="wx_textf5bde536">社会科学</text>
+                                    </view>
+                                    <view class="c-minheight wx-view_major_and_school_body" data-c_e_id="wx_viewf8ab8a65">
+                                        <view class="c-minheight wx-view_major_and_school_body_spacing" data-c_e_id="wx_view2bd7a46e">
+                                            <text class="wx-text_major_and_school_body_text" data-c_e_id="wx_text819549f2">金融专业</text>
+                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_textded8ac8a">会计专业</text>
+                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_text156db833">管理专业</text>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="weui-tab__content" hidden="{{activeIndex_inside != 1}}">
+                                <view class="wx-view_major_and_school_item" data-c_e_id="wx_view_654d13e7">
+                                    <view class="wx-view_major_and_school_head" data-c_e_id="wx_view_ae31a7f3">
+                                        <text class="wx-text_major_and_school_head_text" data-c_e_id="wx_text_39cde3bc">985  211</text>
+                                    </view>
+                                    <view class="c-minheight wx-view_major_and_school_body" data-c_e_id="wx_view_77917707">
+                                        <view class="c-minheight wx-view_major_and_school_body_spacing" data-c_e_id="wx_view_df0214d8">
+                                            <text class="wx-text_major_and_school_body_text" data-c_e_id="wx_text_8d71b96f">清华大学</text>
+                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_text87c5a733">北京大学</text>
+                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_textb4a1022d">上海交大</text>
+                                        </view>
+                                    </view>
+                                </view>
+                                <view class="wx-view_major_and_school_item" data-c_e_id="wx_view3f35a164">
+                                    <view class="wx-view_major_and_school_head" data-c_e_id="wx_viewfa2a36ed">
+                                        <text class="wx-text_major_and_school_head_text" data-c_e_id="wx_textf5bde536">211</text>
+                                    </view>
+                                    <view class="c-minheight wx-view_major_and_school_body" data-c_e_id="wx_viewf8ab8a65">
+                                        <view class="c-minheight wx-view_major_and_school_body_spacing" data-c_e_id="wx_view2bd7a46e">
+                                            <text class="wx-text_major_and_school_body_text" data-c_e_id="wx_text819549f2">...</text>
+                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_textded8ac8a">...</text>
+                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_text156db833">...</text>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>
