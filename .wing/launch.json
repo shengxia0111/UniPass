@@ -6,7 +6,8 @@
             "name": "调试微信小程序",
             "type": "weapp",
             "request": "launch",
-            "project": "${workspaceRoot}"
+            "project": "${workspaceRoot}",
+            "weixinDevTools": "E:/软件/微信web开发者工具"
         }
     ]
 }

@@ -134,7 +134,7 @@ form{
 
 .page-section{
   width: 100%;
-  margin-bottom: 60rpx;
+  margin-bottom: 10rpx;
 }
 .page-section_center{
   display: flex;
@@ -150,7 +150,7 @@ form{
 }
 .page-section-spacing{
   box-sizing: border-box;
-  padding: 0 80rpx;
+  padding: 0 0rpx;
 }
 .page-section-title{
   font-size: 28rpx;
@@ -252,3 +252,19 @@ form{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.view_item_left{float:  left; margin-left:  5%; height:  50px; width: 20%; display:  flex; }
+.view_item_middle{margin-left:  0%; width:  25%; height:  50px; float:  left; display:  flex; justify-content:  flex-start; flex-direction: row; align-items:  flex-start; position:  static; clear:  none; }
+.view_item_right{flex-direction:  column; display:  flex; float:  none; align-items:  flex-end; justify-content:  flex-start; font-size: 16px; }
+
+.wx-text_1{align-self:  center; font-weight:  bold; font-size:  18px; display:  flex; flex:  1 1 0%; justify-content: flex-start; }
+.wx-text_2{font-size:  16px; text-align:  left; align-self:  flex-start; flex:  1 1 0%; display:  flex; flex-direction:  row; font-weight:  500; position:  relative; margin-top: 5px; }
+.wx-text_3{display:  flex; position:  relative; text-align:  left; flex-direction:  row; justify-content:  flex-start; align-items:  baseline; align-self:  flex-start; color:  rgb(64, 64, 64); font-size: 14px; }
+
+.wx-view_navbar1_item{position:  relative; min-height:  50px; height:  50px; font-size:  17px; font-weight:  300; }
+.wx-icon_item_1{display:  flex; flex:  1 1 0%; align-self:  center; justify-content: center; }
+
+.wx-view_major_and_school_head{display:  flex; justify-content:  flex-start; width:  94%; height:  25px; margin-top:  10px; margin-left:  3%; flex-direction:  column; margin-bottom:  10px; background-color:  rgb(102, 200, 255); font-family: Microsoft YaHei; }
+.wx-text_major_and_school_head_text{text-align:  center; font-weight: bold; }
+.wx-view_major_and_school_body_text{display:  flex; flex-direction:  column; margin-left:  25px; margin-right: 25px; }
+.wx-view_major_and_school_body_spacing{display:  flex; flex-direction:  column; margin-left:  25px; margin-right: 25px; }
+.wx-text_major_and_school_body_text{font-weight:  bold; color:  rgb(150, 150, 150); font-size:  16px; margin-top:  1px; margin-bottom: 1px; text-align:  left; }
