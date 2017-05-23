@@ -1,0 +1,46 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">我的1V1</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="wx-view_navbar1_item">
+                <view class="view_item_left">
+                    <icon class="wx-icon_item_1" size="37" type="info_circle"/>
+                </view>
+                <view class="view_item_middle">
+                    <text class="wx-text_1">王 小 强</text>
+                </view>
+                <view class="view_item_right">
+                    <text class="wx-text_2">上海市实验中学</text>
+                    <text class="wx-text_3">初中三年级</text>
+                </view>
+            </view>
+            <view class="wx-view_navbar1_item">
+                <view class="view_item_left">
+                    <icon class="wx-icon_item_1" size="37" type="success"/>
+                </view>
+                <view class="view_item_middle">
+                    <text class="wx-text_1">韩 小 梅</text>
+                </view>
+                <view class="view_item_right">
+                    <text class="wx-text_2">交大附中</text>
+                    <text class="wx-text_3">初中三年级</text>
+                </view>
+            </view>    
+            <view class="wx-view_navbar1_item">
+                <view class="view_item_left">
+                    <icon class="wx-icon_item_1" size="37" type="cancel"/>
+                </view>
+                <view class="view_item_middle">
+                    <text class="wx-text_1">李 小 雷</text>
+                </view>
+                <view class="view_item_right">
+                    <text class="wx-text_2">华师大附中</text>
+                    <text class="wx-text_3">初中一年级</text>
+                </view>
+            </view>            
+        </view>
+    </view>
+</view>

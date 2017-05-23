@@ -1,0 +1,20 @@
+<!--Pages/myPage/myPage.wxml-->
+<view class="container">
+  <view class="basicinfo">
+    <image class="avatar" src="/image/avatar.jpg"></image>
+    <text class="name">盛 夏</text>
+    <button wx:if="{{postList}}" disabled="true" class="apply" type="primary" bindtap="Apply">申请</button>
+    <button wx:else class="apply" type="primary" bindtap="Apply">申请</button>
+  </view>
+</view>
+<view class="button-container">
+  <view class="button1" bindtap="my1v1">
+    <button>我的1v1</button>
+  </view>
+  <view class="button2" bindtap="mywallet">
+    <button>我的钱包</button>
+  </view>
+  <view class="button3" bindtap="client">
+    <button>帮助、客服</button>
+  </view>
+</view>

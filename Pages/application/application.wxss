@@ -1,0 +1,105 @@
+/* Pages/application/application.wxss */
+page{
+  font-family: "微软雅黑";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff
+}
+.realname{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.gender{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width:524rpx;
+  height: 52.5rpx;
+}
+.major{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.school{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wxnumber{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.text-container{
+  margin-top: 60rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  padding-bottom:60rpx;
+  border-bottom: 2px solid #0e0e0e;
+}
+.text1{
+  align-items: left;
+  margin-right: 60rpx;
+}
+.text2{
+  align-items: left;
+  margin-left: 24rpx;
+  margin-right: 100rpx;
+}
+.male{
+  margin-right: 50rpx;
+}
+.text3{
+  align-items: left;
+  margin-right: 60rpx;
+}
+.text4{
+  align-items: left;
+  margin-right: 60rpx;
+}
+.text5{
+  align-items: left;
+  margin-left: 30rpx;
+  margin-right: 70rpx;
+}
+.textarea-container{
+  display: flex;
+  margin-top: 60rpx;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  padding-bottom:60rpx;
+}
+.textarea{
+  border: 2px solid #0e0e0e
+}
+.payfee{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:50rpx;
+  margin-bottom:10rpx;
+
+}
+.fee{
+  margin-left: 300rpx;
+  width: 55rpx;
+}
+.checkbox{
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 240rpx;
+}
+.btn-area{
+   display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,39 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">待处理申请</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">申请时间</view>
+                    <view class="weui-form-preview__value_in-hd">2017/5/22</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">提供的费用</view>
+                    <view class="weui-form-preview__value_in-hd">80元</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">TA的基本信息</view>
+                    <view class="weui-form-preview__value"></view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">姓名</view>
+                    <view class="weui-form-preview__value">韩 小 梅</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">个人介绍</view>
+                    <view class="weui-form-preview__value">就读于交大附中，初中三年级。</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">同意</navigator>
+                <navigator class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">不同意</navigator>
+            </view>           
+        </view>
+    </view>
+</view>

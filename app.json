@@ -1,17 +1,30 @@
 {
     "pages":[
+    
+         
         "Pages/login/login",
+          "Pages/application/application",
+    "Pages/myPage/myPage",
+
         "Pages/homepage/homepage",
         "Pages/introduction/introduction",
         "Pages/welcome/welcome",
         "Pages/recognize/recognize",
         "Pages/searchbar/searchbar",
         "Pages/searchpage/searchpage",
-        "Pages/swiper/swiper"
+        "Pages/swiper/swiper",
+       
+        "Pages/5_1/5_1",
+        "Pages/5_1_copy/5_1_copy",
+        "Pages/5_2/5_2",
+        "Pages/5_1_1/5_1_1",
+        "Pages/5_1_2/5_1_2",
+        "Pages/5_2_1/5_2_1",
+        "Pages/5_2_2/5_2_2"
     ],
     "window": {
         "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "WeUI for 小程序",
+        "navigationBarTitleText": "指南针",
         "navigationBarBackgroundColor": "#f8f8f8",
         "backgroundColor": "#f8f8f8"
     },
@@ -33,7 +46,7 @@
       "selectedIconPath": "image/icon_component_HL.png",
       "text": "主页"
     }, {
-      "pagePath": "Pages/welcome/welcome",
+      "pagePath": "Pages/myPage/myPage",
       "iconPath": "image/icon_API.png",
       "selectedIconPath": "image/icon_API_HL.png",
       "text": "我的"
