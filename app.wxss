@@ -268,3 +268,20 @@ form{
 .wx-view_major_and_school_body_text{display:  flex; flex-direction:  column; margin-left:  25px; margin-right: 25px; }
 .wx-view_major_and_school_body_spacing{display:  flex; flex-direction:  column; margin-left:  25px; margin-right: 25px; }
 .wx-text_major_and_school_body_text{font-weight:  bold; color:  rgb(150, 150, 150); font-size:  16px; margin-top:  1px; margin-bottom: 1px; text-align:  left; }
+
+.userIcon{
+  height:40px;
+  width:40px;
+  display:  flex; 
+  flex:  1 1 0%; 
+  align-self: center; 
+  justify-content: center;  
+}
+.divLine{
+ width: 100%;
+ border-bottom: 1rpx solid #CCCCCC;
+}
+.image{
+  width:100%;
+  height:150px;
+}
