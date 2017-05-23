@@ -11,7 +11,7 @@
             <swiper-item class="c-full wx-swiper-item_vFvbUb" data-c_e_id="wx_swiper_item_56851457"/>
         </swiper>
         <text class="c-block wx-text_ZsVe91" data-c_e_id="wx_text_1bc03eeb">及时度</text>
-        <progress class="wx-progress_b4c0hB" color="#09BB07" data-c_e_id="wx_progress0b09ada2" percent="22" show-info="True" stroke-width="6"/>
+        <progress class="wx-progress_b4c0hB" color="#09BB07" data-c_e_id="wx_progress0b09ada2" percent="60" show-info="True" stroke-width="6"/>
         <text class="c-block wx-text_HG4h9q" data-c_e_id="wx_text_687f3afa">有用度</text>
         <progress class="wx-progress_P6By4d" color="#09BB07" data-c_e_id="wx_progress_8311b677" percent="20" show-info="True" stroke-width="6"/>
         <text class="c-block wx-text_HpvaiQ" data-c_e_id="wx_text_b51fbeae">热情度</text>
