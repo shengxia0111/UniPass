@@ -1,0 +1,18 @@
+<!--Pages/login/login.wxml-->
+<view class="container">
+      <view class="logo">
+        <image  src="/image/logo.jpg" mode="aspectFit"></image>
+      </view>
+      <view class="name">
+        <text class="name">高校指南针</text>
+      </view>
+      <view class="bold">
+         <text class="bold">登录后该应用将获得以下权限</text>
+      </view>
+      <view class="lisence">
+         <text class="light">获得你的公开信息（昵称、头像等）</text>
+      </view>
+</view>
+ <view class="buttons">
+         <button class="comfirm" bindtap="confirm">确认授权</button>        
+</view>

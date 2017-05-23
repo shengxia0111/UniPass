@@ -1,0 +1,47 @@
+/* Pages/login/login.wxss */
+page
+{
+  background-color: #FFFFFF;
+}
+.container
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#FFFFFF; 
+  margin-top: 100rpx;
+  
+}
+.name
+{
+  margin-bottom:80rpx; 
+  font-size: 20px;
+  font-weight: bold;
+}
+.bold
+{
+  font-size: 15px;
+  font-weight: bold;
+}
+.light
+{
+  font-size: 15px;
+  font-weight: light;
+}
+.logo
+{
+  display:flex;
+  align-items: center;
+  width: 250rpx;
+  height: 250rpx;
+}
+.buttons
+{
+  display: flex;
+  flex-direction: row;
+  margin:0 80rpx 0 80rpx;
+}
+.confirm
+{
+  background-color: #009100; 
+}
