@@ -2,9 +2,10 @@
     "pages":[
         "Pages/login/login",
         "Pages/homepage/homepage",
-        
+        "Pages/introduction/introduction",
+        "Pages/recognize/recognize",
         "Pages/welcome/welcome",
-        
+        "Pages/searchpage/searchpage",
         "Pages/searchbar/searchbar",
         "Pages/swiper/swiper"
     ],

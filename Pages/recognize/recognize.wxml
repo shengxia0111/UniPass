@@ -1,0 +1,11 @@
+<view class="page">
+    <text class="c-block text1" data-c_e_id="wx_text_f17d0c02">TA的承诺</text>
+    <view class="c-minheight view1" data-c_e_id="wx_view_9dc5c5d2">
+        我一定做出最细致周到的讲解
+    </view>
+    <text class="c-block text2" data-c_e_id="wx_text_d1eebd34">介绍一下你自己</text>
+    <textarea class="c-block c-fullwidth textarea1" data-c_e_id="wx_textarea_964d09c5" name="textarea1" placeholder="介绍一下你自己，增加获得咨询的机会喔" type="textarea"/>
+    <text class="c-block text3" data-c_e_id="wx_text_9bf1c5bf">你愿意支付（元）</text>
+    <input class="c-block c-fullwidth input1" data-c_e_id="wx_input_fdb25924" maxlength="16" name="input1" placeholder="慷慨一些喔" type="text"/>
+    <button type="primary" bindtap="returnToUpperPage">认识TA</button>
+</view>

@@ -1,5 +1,3 @@
-var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
-
 Page({
     data: {
         tabs: ["热门学生", "分类"],
@@ -23,18 +21,9 @@ Page({
 
         imageSourceList: ["/image/homepage_image/library_1.jpg", "/image/homepage_image/office_1.jpg", "/image/homepage_image/doctor_1.jpg"],
     },
-    onLoad: function () {
+    onLoad: function (options) {
         var that = this;
-        wx.getSystemInfo({
-            success: function(res) {
-                that.setData({
-                    sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
-                    sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex,
-                    sliderLeft_inside: (res.windowWidth / that.data.tabs_inside.length - sliderWidth) / 2,
-                    sliderOffset_inside: res.windowWidth / that.data.tabs_inside.length * that.data.activeIndex_inside
-                });
-            }
-        }); 
+        var currentContent= options.content;
         var postList=[
             {
                 image_source:"/image/homepage_image/library_1.jpg"  
@@ -85,7 +74,9 @@ Page({
         ]
         that.setData({
             postList:postList,
-            hotList:hotList
+            hotList:hotList,
+            inputVal:currentContent,
+            inputShowed:true,
         });
     },
     tabClick: function (e) {

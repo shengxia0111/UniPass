@@ -1,0 +1,97 @@
+
+<view class="page">
+    <view class="page__bd">
+        <swiper class="wx-swiper_phCTzc" data-c_e_id="wx_swiper_e8b218ac" indicator-dots="True" lower-threshold="50">
+            <swiper-item class="c-full wx-swiper-item_lHYFo2" data-c_e_id="wx_swiper_item_350596aa">
+                <view class="swiper-item">
+                    <image class="image" mode="scaleToFill" src="{{hotList[currentPostID - 1].background}}" />
+                </view>
+            </swiper-item>
+            <swiper-item class="c-full wx-swiper-item_jNwRsc" data-c_e_id="wx_swiper_item_5767b0df"/>
+            <swiper-item class="c-full wx-swiper-item_vFvbUb" data-c_e_id="wx_swiper_item_56851457"/>
+        </swiper>
+        <text class="c-block wx-text_ZsVe91" data-c_e_id="wx_text_1bc03eeb">及时度</text>
+        <progress class="wx-progress_b4c0hB" color="#09BB07" data-c_e_id="wx_progress0b09ada2" percent="22" show-info="True" stroke-width="6"/>
+        <text class="c-block wx-text_HG4h9q" data-c_e_id="wx_text_687f3afa">有用度</text>
+        <progress class="wx-progress_P6By4d" color="#09BB07" data-c_e_id="wx_progress_8311b677" percent="20" show-info="True" stroke-width="6"/>
+        <text class="c-block wx-text_HpvaiQ" data-c_e_id="wx_text_b51fbeae">热情度</text>
+        <progress class="wx-progress_ItPgM9" color="#09BB07" data-c_e_id="wx_progress_20bf58ef" percent="20" show-info="True" stroke-width="6"/>
+        <view class="page__navbard">
+            <view class="weui-tab_type2">
+                <view class="weui-navbar">
+                    <block wx:for="{{tabs}}" wx:key="*this">
+                        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                            <view class="weui-navbar__title">{{item}}</view>
+                        </view>
+                    </block>
+                    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                </view>
+                <view class="weui-tab__panel">
+                    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                        <view class="flex-wrp" style="flex-direction:column;">
+                            <view class="flex-item flex-item-V">
+                                <view class="wx-view_navbar1_item">
+                                    <view class="introduction_view_item_left">
+                                        <text class="wx-text_1">姓名</text>
+                                    </view>
+                                    <view class="introduction_view_item_right">
+                                        <text class="wx-text_1_type2">{{hotList[currentPostID - 1].name}}</text>
+                                    </view>
+                                    <view class="divLine"></view>
+                                    <view class="introduction_view_item_left">
+                                        <text class="wx-text_1">学校</text>
+                                    </view>
+                                    <view class="introduction_view_item_right">
+                                        <text class="wx-text_1_type2">{{hotList[currentPostID - 1].school}}</text>
+                                    </view>
+                                    <view class="divLine"></view>
+                                    <view class="introduction_view_item_left">
+                                        <text class="wx-text_1">专业</text>
+                                    </view>
+                                    <view class="introduction_view_item_right">
+                                        <text class="wx-text_1_type2">{{hotList[currentPostID - 1].major}}</text>
+                                    </view>
+                                    <view class="divLine"></view>
+                                    <view class="introduction_view_item_left">
+                                        <text class="wx-text_1">自我介绍</text>
+                                    </view>
+                                    <view class="introduction_view_item_right">
+                                        <text class="wx-text_1_type2">{{hotList[currentPostID - 1].selfIntroduction}}</text>
+                                    </view>
+                                    <view class="divLine"></view>
+                                    <view class="introduction_view_item_left">
+                                        <text class="wx-text_1">我的预期质询费</text>
+                                    </view>
+                                    <view class="introduction_view_item_right">
+                                        <text class="wx-text_1_type2">￥{{hotList[currentPostID - 1].fee}}元/次</text>
+                                    </view>
+                                    <view class="divLine"></view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                        <view class="flex-wrp" style="flex-direction:column;">
+                            <text class="c-block wx-text_zEA7HN" data-c_e_id="wx_text_c22f5670">TA的评价</text>
+                            <text class="c-block wx-text_6s4BnL" data-c_e_id="wx_text_e63792e8">{{appriseList[currentPostID - 1].apprise[0]}}</text>
+                            <text class="c-block wx-text_74LzCk" data-c_e_id="wx_text_c6b753b1">{{appriseList[currentPostID - 1].apprise[1]}}</text>
+                            <text class="c-block wx-text_74LzCk" data-c_e_id="wx_text_c6b753b1">{{appriseList[currentPostID - 1].apprise[2]}}</text>
+                            <button class="wx-button_30oNAL" hover-class="button-hover" size="default" type="primary" bindtap="getToKnowTAClick">
+                                认识TA
+                            </button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+

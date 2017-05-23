@@ -19,24 +19,29 @@
                 <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
             </view>
             <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
-                <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <navigator url="../../Pages/introduction/introduction?id=1" class="weui-cell" hover-class="weui-cell_active">
                     <view class="weui-cell__bd">
-                        <view>实时搜索文本</view>
+                        <view>李路明</view>
                     </view>
                 </navigator>
-                <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <navigator url="../../Pages/introduction/introduction?id=2" class="weui-cell" hover-class="weui-cell_active">
                     <view class="weui-cell__bd">
-                        <view>实时搜索文本</view>
+                        <view>王晨宣</view>
                     </view>
                 </navigator>
-                <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <navigator url="../../Pages/introduction/introduction?id=3" class="weui-cell" hover-class="weui-cell_active">
                     <view class="weui-cell__bd">
-                        <view>实时搜索文本</view>
+                        <view>李伊萌</view>
                     </view>
                 </navigator>
-                <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <navigator url="../../Pages/introduction/introduction?id=4" class="weui-cell" hover-class="weui-cell_active">
                     <view class="weui-cell__bd">
-                        <view>实时搜索文本</view>
+                        <view>肖晨</view>
+                    </view>
+                </navigator>
+                <navigator url="../../Pages/introduction/introduction?id=5" class="weui-cell" hover-class="weui-cell_active">
+                    <view class="weui-cell__bd">
+                        <view>佟针叶</view>
                     </view>
                 </navigator>
             </view>
@@ -44,11 +49,21 @@
         <view class="page-section page-section-spacing swiper">
         <swiper indicator-dots="{{indicatorDots}}"
             autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-            <block wx:for="{{background}}" wx:key="*this">
             <swiper-item>
-                <view class="swiper-item {{item}}"></view>
+                <view class="swiper-item">
+                    <image class="image" mode="scaleToFill" src="{{postList[0].image_source}}" />
+                </view>
             </swiper-item>
-            </block>
+            <swiper-item>
+                <view class="swiper-item">
+                    <image class="image" mode="scaleToFill" src="{{postList[1].image_source}}" />
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view class="swiper-item">
+                    <image class="image" mode="scaleToFill" src="{{postList[2].image_source}}" />
+                </view>
+            </swiper-item>
         </swiper>
         </view>
         <view class="page__navbard">
@@ -64,22 +79,23 @@
                 <view class="weui-tab__panel">
                     <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
                         <view class="flex-wrp" style="flex-direction:column;">
-                            <view class="flex-item flex-item-V">
-                                <view class="wx-view_navbar1_item">
-                                    <view class="view_item_left">
-                                        <icon class="wx-icon_item_1" size="37" type="success"/>
-                                    </view>
-                                    <view class="view_item_middle">
-                                        <text class="wx-text_1">李 路 明</text>
-                                    </view>
-                                    <view class="view_item_right">
-                                        <text class="wx-text_2">北京科技大学</text>
-                                        <text class="wx-text_3">工业设计</text>
+                            <block wx:for="{{hotList}}" wx:for-item="item" wx:for-index="idx">
+                                <view class="flex-item flex-item-V" bindtap="tapClickToUserInfo" data-post-id="{{item.postID}}">
+                                    <view class="wx-view_navbar1_item">
+                                        <view class="view_item_left">
+                                            <image class="userIcon" mode="aspectFit" src="{{item.icon}}"/>
+                                        </view>
+                                        <view class="view_item_middle">
+                                            <text class="wx-text_1">{{item.name}}</text>
+                                        </view>
+                                        <view class="view_item_right">
+                                            <text class="wx-text_2">{{item.school}}</text>
+                                            <text class="wx-text_3">{{item.major}}</text>
+                                        </view>
+                                        <view class="divLine"></view>
                                     </view>
                                 </view>
-                            </view>
-                            <view class="flex-item flex-item-V demo-text-2"></view>
-                            <view class="flex-item flex-item-V demo-text-3"></view>
+                            </block>
                         </view>
                     </view>
                     <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
@@ -101,9 +117,9 @@
                                     </view>
                                     <view class="c-minheight wx-view_major_and_school_body" data-c_e_id="wx_view_77917707">
                                         <view class="c-minheight wx-view_major_and_school_body_spacing" data-c_e_id="wx_view_df0214d8">
-                                            <text class="wx-text_major_and_school_body_text" data-c_e_id="wx_text_8d71b96f">机械专业</text>
-                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_text87c5a733">计算机专业</text>
-                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_textb4a1022d">电气工程与自动化</text>
+                                            <navigator class="wx-text_major_and_school_body_text" url="../../Pages/searchpage/searchpage?content=机械专业">机械专业</navigator>
+                                            <navigator class="c-block wx-text_major_and_school_body_text" url="../../Pages/searchpage/searchpage?content=计算机专业">计算机专业</navigator>
+                                            <navigator class="c-block wx-text_major_and_school_body_text" url="../../Pages/searchpage/searchpage?content=电气工程与自动化">电气工程与自动化</navigator>
                                         </view>
                                     </view>
                                 </view>
@@ -113,9 +129,9 @@
                                     </view>
                                     <view class="c-minheight wx-view_major_and_school_body" data-c_e_id="wx_viewf8ab8a65">
                                         <view class="c-minheight wx-view_major_and_school_body_spacing" data-c_e_id="wx_view2bd7a46e">
-                                            <text class="wx-text_major_and_school_body_text" data-c_e_id="wx_text819549f2">金融专业</text>
-                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_textded8ac8a">会计专业</text>
-                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_text156db833">管理专业</text>
+                                            <navigator class="wx-text_major_and_school_body_text" url="../../Pages/searchpage/searchpage?content=金融专业">金融专业</navigator>
+                                            <navigator class="c-block wx-text_major_and_school_body_text" url="../../Pages/searchpage/searchpage?content=会计专业">会计专业</navigator>
+                                            <navigator class="c-block wx-text_major_and_school_body_text" url="../../Pages/searchpage/searchpage?content=管理专业">管理专业</navigator>
                                         </view>
                                     </view>
                                 </view>
@@ -127,9 +143,9 @@
                                     </view>
                                     <view class="c-minheight wx-view_major_and_school_body" data-c_e_id="wx_view_77917707">
                                         <view class="c-minheight wx-view_major_and_school_body_spacing" data-c_e_id="wx_view_df0214d8">
-                                            <text class="wx-text_major_and_school_body_text" data-c_e_id="wx_text_8d71b96f">清华大学</text>
-                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_text87c5a733">北京大学</text>
-                                            <text class="c-block wx-text_major_and_school_body_text" data-c_e_id="wx_textb4a1022d">上海交大</text>
+                                            <navigator class="wx-text_major_and_school_body_text" url="../../Pages/searchpage/searchpage?content=清华大学">清华大学</navigator>
+                                            <navigator class="c-block wx-text_major_and_school_body_text" url="../../Pages/searchpage/searchpage?content=北京大学">北京大学</navigator>
+                                            <navigator class="c-block wx-text_major_and_school_body_text" url="../../Pages/searchpage/searchpage?content=上海交大">上海交大</navigator>
                                         </view>
                                     </view>
                                 </view>
@@ -152,5 +168,4 @@
             </view>
         </view>
     </view>
-
 </view>
