@@ -1,5 +1,6 @@
 // Pages/application/application.js
 var inputContent= {};
+var gender=0;
 
 Page({
 
@@ -12,24 +13,50 @@ Page({
 
   bindChange: function(e) {
     console.log(e);
-    inputContent[e.currentTarget.id]= e.detail.value;
+    inputContent[e.currentTarget.id] = e.detail.value;
     this.setData({
-      inputContent:inputContent,
+      inputContent: inputContent,
     })
   },
 
-  bindTap: function(e) {
+  bindTap: function (e) {
     console.log(e);
     this.setData({
-      gender:e.currentTarget.id,
+      gender: e.currentTarget.id,
     })
   },
 
   submitClick: function(e) {
     console.log(e);
     var content = e.currentTarget.dataset.postId;
+
+    wx.request({
+      url: getApp().data.URL+'Application.php',
+      data:{
+        OpenID:getApp().data.OpenID,
+        selfIntroduction:inputContent['selfIntroduction'],
+        name: inputContent['name'],
+        weChatNumber: inputContent['weChatNumber'],
+        gender:gender,
+      },
+      method:'GET',
+      header: {
+        "Content-Type": "json"
+      },
+      success: function (res) {
+        console.log(res);
+      },
+      fail: function (res) {
+        // fai
+      },
+      complete: function (res) {
+        // complete
+      }
+    })
     console.log(content);
-    //wx.navigateBack();
+ 
+      wx.navigateBack();
+   
     
   },
 
@@ -65,7 +92,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    wx.showToast({title: '提交成功', duration: 3000,});
+    wx.showToast({ title: '提交成功' });
   },
 
   /**
