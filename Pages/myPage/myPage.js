@@ -31,11 +31,21 @@ Page({
        getApp().data.UserType = res.data.UserType;
        console.log(getApp().data.UserType);
       },
-      
     })
-
-
   },
+
+  money:function() {
+    wx.navigateTo({
+             url: "/Pages/money/money",
+         }) 
+  },
+
+  client:function() {
+    wx.navigateTo({
+             url: "/Pages/customservice/customservice",
+         }) 
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
