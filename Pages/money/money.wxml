@@ -1,0 +1,14 @@
+<!--Pages/money/money.wxml-->
+<view class="container">
+    <image class="moneyIcon" src="/image/system_icon/钱1.png" mode="aspectFill" />
+    <text class="moneyText1">我的零钱</text>
+    <text class="moneyText2">￥20.24逸</text>
+</view>
+<view class="button-container">
+  <view class="button1" bindtap="recharge">
+    <button type="primary">充值</button>
+  </view>
+  <view class="button2" bindtap="withdraw">
+    <button type="warn">提现</button>
+  </view>
+</view>
