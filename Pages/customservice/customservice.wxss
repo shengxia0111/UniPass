@@ -14,3 +14,7 @@
 .CS_Text{
     display:  flex; justify-content:  flex-start; flex:  1 1 0%; margin-left:  3%; font-size:  17px; font-family:  "Microsoft YaHei"; color: #707070; 
 }
+.CS_Icon{
+    width:20px;
+    height:20px;
+}

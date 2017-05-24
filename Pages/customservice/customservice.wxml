@@ -2,7 +2,7 @@
 <view class="cutomServiceBody" data-c_e_id="wx_view_69a7dff2">
     <view class="customServiceTab" data-c_e_id="wx_view_b8dd189e">
         <view class="CS_Left" data-c_e_id="wx_view_4572f8ad">
-            <icon class="CS_Icon" data-c_e_id="wx_icon_3574272f" size="23" type="info"/>
+            <image class="CS_Icon" data-c_e_id="wx_icon_3574272f" src="/image/system_icon/提示.png" mode="aspectFill" />
         </view>
         <view class="CS_Right" data-c_e_id="wx_view_11a74fb6">
             <text class="CS_Text" data-c_e_id="wx_text_420aa9c6">如果您有什么疑问或者需要帮助，    
