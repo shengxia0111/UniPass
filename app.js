@@ -11,6 +11,7 @@ App({
     data: {
     URL: "https://56493008.qcloud.la/",
     OpenID:null,
+    UserType:null,
   },
   // lazy loading openid
 });

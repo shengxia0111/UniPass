@@ -1,8 +1,10 @@
-
+var User = false;
+var UserInfo = {};
+var app = getApp().data.UserType;
 Page({
   
   data: {
-    postList:getApp().data.UserType
+    postList:true
   },
   my1v1:function(event){
     wx.navigateTo({
@@ -14,12 +16,8 @@ Page({
       url: '../application/application',
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    var UserInfo;
-    var User;
+  judgeUserType:function(){
+
     wx.request({
       url: getApp().data.URL + "GetUserInfoByOpenID.php",
       data: {
@@ -29,29 +27,45 @@ Page({
         "content-type": "json"
       },
       success(res) {
-        UserInfo = res.data
-        console.log(UserInfo)
-        if (UserInfo.UserType == "1") {
-          getApp().data.UserType = false;
-        } else {
-          getApp().data.UserType  = true;
-        }
-      }
+       console.log(res.data.UserType);
+       getApp().data.UserType = res.data.UserType;
+       console.log(getApp().data.UserType);
+      },
+      
     })
+
+
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.judgeUserType();
+
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    UserInfo = getApp().data.UserType
+    console.log(getApp().data.UserType)
+    if (UserInfo == 1) {
+      User = false;
+    } else {
+      User = true;
+    }
+    this.setData({
+      postList: User
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
 
