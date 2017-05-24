@@ -11,7 +11,7 @@
   <view class="button1" bindtap="my1v1">
     <button>我的1v1</button>
   </view>
-  <view class="button2" bindtap="mywallet">
+  <view class="button2" bindtap="money">
     <button>我的钱包</button>
   </view>
   <view class="button3" bindtap="client">
