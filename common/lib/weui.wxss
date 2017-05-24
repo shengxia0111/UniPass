@@ -966,6 +966,7 @@ icon {
   padding-top: 50px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  justify-content: center;
 }
 .weui-search-bar {
   position: relative;

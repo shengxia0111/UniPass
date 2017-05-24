@@ -280,8 +280,15 @@ form{
 .divLine{
  width: 100%;
  border-bottom: 1rpx solid #CCCCCC;
+ display: flex;
 }
 .image{
   width:100%;
   height:150px;
+}
+.introduction_view_item_left{
+  float:  left; margin-left:  15%; height:  50px; width: 20%; display:  flex; 
+}
+.introduction_view_item_right{
+  margin-left:  20%; width:  40%; height:  50px; float:  left; display:  flex; justify-content:  flex-start; flex-direction: row; align-items:  flex-start; position:  static; clear:  none;
 }
