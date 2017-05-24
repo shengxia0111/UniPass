@@ -1,11 +1,8 @@
 {
-    "pages":[
-    
-         
+    "pages":[     
         "Pages/login/login",
-          "Pages/application/application",
-    "Pages/myPage/myPage",
-
+        "Pages/application/application",
+        "Pages/myPage/myPage",
         "Pages/homepage/homepage",
         "Pages/introduction/introduction",
         "Pages/welcome/welcome",
@@ -13,7 +10,6 @@
         "Pages/searchbar/searchbar",
         "Pages/searchpage/searchpage",
         "Pages/swiper/swiper",
-       
         "Pages/5_1/5_1",
         "Pages/5_1_copy/5_1_copy",
         "Pages/5_2/5_2",

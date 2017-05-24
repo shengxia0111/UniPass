@@ -1,11 +1,25 @@
 // Pages/application/application.js
+var inputContent= {};
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    inputContent= {}
+  },
+
+  bindChange: function(e) {
+    inputContent[e.currentTarget.id]= e.detail.value;
+  },
+
+  submitClick: function(e) {
+    console.log(e);
+    var content = e.currentTarget.dataset.postId;
+    console.log(content);
+    wx.navigateBack();
+    
   },
 
   /**
@@ -40,7 +54,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    wx.showToast({title: '提交成功', duration: 3000,});
   },
 
   /**

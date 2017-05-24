@@ -3,43 +3,43 @@
    <view class="text-container">
      <view class="realname">
        <text class="text1">真实姓名</text>
-       <input placeholder="输入姓名..." />
+       <input id="name" bindchange="bindChange" placeholder="输入姓名..." />
      </view>
      <view class="gender">
        <text class="text2">性  别</text>
        <radio-group class="radio-group" bindchange="change">
-         <radio value="1" checked="true" /><text class="male">男</text>
-         <radio value="0" checked="true" /><text>女</text>
+         <radio id="male" bindchange="bindChange" value="1" checked="true" /><text class="male">男</text>
+         <radio id="female" bindchange="bindChange" value="0" checked="true" /><text>女</text>
        </radio-group>
      </view>
      <view class="major">
        <text class="text3">本科专业</text>
-       <input placeholder="输入专业..." />
+       <input id="major" bindchange="bindChange" placeholder="输入专业..." />
      </view>
      <view class="school">
        <text class="text4">本科学校</text>
-       <input placeholder="输入学校..." />
+       <input id="school" bindchange="bindChange" placeholder="输入学校..." />
      </view>
      <view class="wxnumber">
        <text class="text5">微信号</text>
-       <input placeholder="输入微信号..." />
+       <input id="weChatNumber" bindchange="bindChange" placeholder="输入微信号..." />
      </view>
    </view>
-   <view class="textarea-container">
-   <text>自我介绍：</text>
-     <textarea class="textarea" maxlength="200" />
+   <view class="textarea-container" data-post-id="6">
+     <text>自我介绍：</text>
+     <textarea id="selfIntroduction" bindchange="bindChange" class="textarea" maxlength="200" />
    </view>
    <view class="payfee">
        <text class="text6">我的咨询费用：</text>
-       <input class="fee" maxlength="3" />
+       <input id="fee" bindchange="bindChange" class="fee" maxlength="3" />
        <text class="text6">元/次</text>
      </view>
      <view class="checkbox">
-       <checkbox value="1" checked="false" />
+       <checkbox id="agree" bindchange="bindChange" value="1" checked="false" />
        <text>同意服务条款</text>
      </view>
     <view class="btn-area">
-      <button formType="submit">Submit</button>
-      <button formType="reset">Reset</button>
+      <button formType="submit" bindtap="submitClick">提交</button>
+      <button formType="reset">清空</button>
     </view>
 </form>
