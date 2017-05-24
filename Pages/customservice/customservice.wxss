@@ -1,0 +1,16 @@
+/* Pages/customservice/customservice.wxss */
+.cutomServiceBody{
+    display:  flex; flex-direction:  column; width:  90%; margin-left:  5%; margin-top:  50px; min-height: 150px; 
+}
+.customServiceTab{
+    display:  flex; min-height:  100px; border-bottom-color:  rgb(99, 99, 99); border-bottom-width:  1px; border-bottom-style: solid; 
+}
+.CS_Left{
+    display:  flex; width: 17%; justify-content:  flex-end; align-self:  center; min-height:  50px; 
+}
+.CS_Right{
+    min-height:  50px; width:  80%; display:  flex; align-self: center; 
+}
+.CS_Text{
+    display:  flex; justify-content:  flex-start; flex:  1 1 0%; margin-left:  3%; font-size:  17px; font-family:  "Microsoft YaHei"; color: #707070; 
+}
