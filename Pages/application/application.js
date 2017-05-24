@@ -7,18 +7,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-    inputContent= {}
+    inputContent:{}
   },
 
   bindChange: function(e) {
+    console.log(e);
     inputContent[e.currentTarget.id]= e.detail.value;
+    this.setData({
+      inputContent:inputContent,
+    })
+  },
+
+  bindTap: function(e) {
+    console.log(e);
+    this.setData({
+      gender:e.currentTarget.id,
+    })
   },
 
   submitClick: function(e) {
     console.log(e);
     var content = e.currentTarget.dataset.postId;
     console.log(content);
-    wx.navigateBack();
+    //wx.navigateBack();
     
   },
 

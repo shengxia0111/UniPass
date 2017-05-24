@@ -8,8 +8,8 @@
      <view class="gender">
        <text class="text2">性  别</text>
        <radio-group class="radio-group" bindchange="change">
-         <radio id="male" bindchange="bindChange" value="1" checked="true" /><text class="male">男</text>
-         <radio id="female" bindchange="bindChange" value="0" checked="true" /><text>女</text>
+         <radio id="1" bindtap="bindTap" value="1" checked="true" /><text class="male">男</text>
+         <radio id="0" bindtap="bindTap" value="0" checked="true" /><text>女</text>
        </radio-group>
      </view>
      <view class="major">
@@ -27,7 +27,7 @@
    </view>
    <view class="textarea-container" data-post-id="6">
      <text>自我介绍：</text>
-     <textarea id="selfIntroduction" bindchange="bindChange" class="textarea" maxlength="200" />
+     <input id="selfIntroduction" bindchange="bindChange" class="textarea" maxlength="200" />
    </view>
    <view class="payfee">
        <text class="text6">我的咨询费用：</text>
@@ -35,7 +35,7 @@
        <text class="text6">元/次</text>
      </view>
      <view class="checkbox">
-       <checkbox id="agree" bindchange="bindChange" value="1" checked="false" />
+       <checkbox id="agree" value="1" checked="false" />
        <text>同意服务条款</text>
      </view>
     <view class="btn-area">
